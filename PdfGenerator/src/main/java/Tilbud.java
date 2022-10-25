@@ -1,22 +1,10 @@
-public class Tilbud {
-
-
-
-    public Tilbud(String companyName, String produktnavn, String informasjon, String egenandel, String kjoerelengde, String pris) {
-        this.companyName = companyName;
-        this.produktnavn = produktnavn;
-        this.informasjon = informasjon;
-        this.egenandel = egenandel;
-        this.kjoerelengde = kjoerelengde;
-        this.pris = pris;
-    }
-
+public abstract class Tilbud {
     public String companyName;
     public String produktnavn;
     public String informasjon;
     public String egenandel;
-    public String kjoerelengde;
     public String pris;
+
 
     public String getCompanyName() {
         return companyName;
@@ -48,14 +36,6 @@ public class Tilbud {
 
     public void setEgenandel(String egenandel) {
         this.egenandel = egenandel;
-    }
-
-    public String getKjoerelengde() {
-        return kjoerelengde;
-    }
-
-    public void setKjoerelengde(String kjoerelengde) {
-        this.kjoerelengde = kjoerelengde;
     }
 
     public String getPris() {

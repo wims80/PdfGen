@@ -1,13 +1,21 @@
-public class BilInput {
+public class BilInput extends CalculatorInput {
 
-    public String mellomnavn;
-    public String etternavn;
-    public String foedselsnr;
     public String postnr;
-
     public String registreringsnummer;
     public String tyverialarm;
     public String gjenfinning;
+    public String bilmerkeNavn;
+    public String modellNavn;
+    public String modellaar;
+    public String modellVariantNavn;
+    public String registreringsaar;
+    public String doorCount;
+    public String enginePowerKw;
+    public String engineVolume;
+    public String fourWheelDrive;
+    public String fuelType;
+    public String gearboxType;
+
 
     public String leasing;
     public String forsteBil;
@@ -19,30 +27,6 @@ public class BilInput {
     public String antallBilskader;
     public String parkeringsforhold;
     public String dagensSelskap;
-
-    public String getMellomnavn() {
-        return mellomnavn;
-    }
-
-    public void setMellomnavn(String mellomnavn) {
-        this.mellomnavn = mellomnavn;
-    }
-
-    public String getEtternavn() {
-        return etternavn;
-    }
-
-    public void setEtternavn(String etternavn) {
-        this.etternavn = etternavn;
-    }
-
-    public String getFoedselsnr() {
-        return foedselsnr;
-    }
-
-    public void setFoedselsnr(String foedselsnr) {
-        this.foedselsnr = foedselsnr;
-    }
 
     public String getPostnr() {
         return postnr;
@@ -74,6 +58,94 @@ public class BilInput {
 
     public void setGjenfinning(String gjenfinning) {
         this.gjenfinning = gjenfinning;
+    }
+
+    public String getBilmerkeNavn() {
+        return bilmerkeNavn;
+    }
+
+    public void setBilmerkeNavn(String bilmerkeNavn) {
+        this.bilmerkeNavn = bilmerkeNavn;
+    }
+
+    public String getModellNavn() {
+        return modellNavn;
+    }
+
+    public void setModellNavn(String modellNavn) {
+        this.modellNavn = modellNavn;
+    }
+
+    public String getModellaar() {
+        return modellaar;
+    }
+
+    public void setModellaar(String modellaar) {
+        this.modellaar = modellaar;
+    }
+
+    public String getModellVariantNavn() {
+        return modellVariantNavn;
+    }
+
+    public void setModellVariantNavn(String modellVariantNavn) {
+        this.modellVariantNavn = modellVariantNavn;
+    }
+
+    public String getRegistreringsaar() {
+        return registreringsaar;
+    }
+
+    public void setRegistreringsaar(String registreringsaar) {
+        this.registreringsaar = registreringsaar;
+    }
+
+    public String getDoorCount() {
+        return doorCount;
+    }
+
+    public void setDoorCount(String doorCount) {
+        this.doorCount = doorCount;
+    }
+
+    public String getEnginePowerKw() {
+        return enginePowerKw;
+    }
+
+    public void setEnginePowerKw(String enginePowerKw) {
+        this.enginePowerKw = enginePowerKw;
+    }
+
+    public String getEngineVolume() {
+        return engineVolume;
+    }
+
+    public void setEngineVolume(String engineVolume) {
+        this.engineVolume = engineVolume;
+    }
+
+    public String getFourWheelDrive() {
+        return fourWheelDrive;
+    }
+
+    public void setFourWheelDrive(String fourWheelDrive) {
+        this.fourWheelDrive = fourWheelDrive;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
+    }
+
+    public String getGearboxType() {
+        return gearboxType;
+    }
+
+    public void setGearboxType(String gearboxType) {
+        this.gearboxType = gearboxType;
     }
 
     public String getLeasing() {
@@ -155,6 +227,4 @@ public class BilInput {
     public void setDagensSelskap(String dagensSelskap) {
         this.dagensSelskap = dagensSelskap;
     }
-
-
 }
