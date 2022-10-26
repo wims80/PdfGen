@@ -30,8 +30,8 @@ import fr.opensagres.xdocreport.template.velocity.internal.VelocityTemplateEngin
 public class PdfGenerator {
     public static void main(String[] args) {
         PdfGenerator pg = new PdfGenerator();
-        pg.genHusdataAndPDF();
-        //pg.genBildataAndPDF();
+        //pg.genHusdataAndPDF();
+        pg.genBildataAndPDF();
         //pg.genReisedataAndPDF();
         //pg.genInnbodataAndPDF();
     }
@@ -157,7 +157,7 @@ public class PdfGenerator {
         List<String> innbruddsAlarmEgenskaper = new ArrayList<String>();
         innbruddsAlarmEgenskaper.add("fg_godkjent");
         innbruddsAlarmEgenskaper.add("varsler_vaktselskap");
-        //hi.setInnbruddsalarmEgenskap(innbruddsAlarmEgenskaper);
+        hi.setInnbruddsalarmEgenskap(innbruddsAlarmEgenskaper);
         hi.setBrannalarm("true");
         List<String> brannAlarmEgenskaper = new ArrayList<String>();
         brannAlarmEgenskaper.add("fg_godkjent");
