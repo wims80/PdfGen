@@ -60,6 +60,7 @@ public class PdfGenerator {
         ii.setInnbosum("500000");
         ii.setEgenandel("10000");
         ii.setRomUnderBakken("true");
+        ii.setAntallForsikringsskader("2");
         ii.setKomfyrvaktKomfyralarm("komfyralarm");
         ii.setElKontroll("ja_siste_fem");
         ii.setAntallHusstandmedlemmer("3");
@@ -68,7 +69,7 @@ public class PdfGenerator {
         ii.setBruttoareal("100");
         ii.setBadWc("3");
         ii.setAutomatsikringer("true");
-        ii.setAutomatsikringerAar("1999");
+        //ii.setAutomatsikringerAar("1999");
         ii.setRorIRor("true");
 
         // Om deg
