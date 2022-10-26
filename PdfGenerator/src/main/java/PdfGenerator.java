@@ -30,11 +30,39 @@ import fr.opensagres.xdocreport.template.velocity.internal.VelocityTemplateEngin
 public class PdfGenerator {
     public static void main(String[] args) {
         PdfGenerator pg = new PdfGenerator();
-        //pg.generatePdf(args[0]);
-        //pg.convertBil();
         //pg.genBildataAndPDF();
-        pg.genHusdataAndPDF();
-        //pg.generatePDF("hus");
+        //pg.genHusdataAndPDF();
+        pg.genReisedataAndPDF();
+    }
+
+    public void genReisedataAndPDF() {
+        ReiseInput ri = new ReiseInput();
+
+        // Om reise
+        ri.setOmfang("familie");
+        ri.setEldste("18");
+        ri.setAntallskader("1");
+
+        // Om meg
+        ri.setMellomnavn("Wim");
+        ri.setEtternavn("Sjøholm");
+        ri.setFoedselsnr("27058038356");
+        ri.setPostnr("0482");
+        ri.setGate("Grefsenveien");
+        ri.setGatenr("8");
+        List<String> foreninger = new ArrayList<String>();
+        foreninger.add("KOL");
+        foreninger.add("Norsk Journalistlag");
+        foreninger.add("Ansatt kommune");
+        ri.setForeningsMedlemsskap(foreninger);
+
+        List<Tilbud> tilbud = new ArrayList<Tilbud>();
+        tilbud.add(new ReiseTilbud("Utrygg", "Hus", "Info 1",  "12000", "1337"));
+        tilbud.add(new ReiseTilbud("Else", "Hus", "Info 2", "12000", "420"));
+        tilbud.add(new ReiseTilbud("SlukketBrann", "Husforsikring", "Info 3", "12000", "6969"));
+
+        generatePDF(ri, tilbud, "reise");
+
     }
 
     public void genHusdataAndPDF() {
