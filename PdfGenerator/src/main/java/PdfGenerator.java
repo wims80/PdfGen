@@ -32,7 +32,67 @@ public class PdfGenerator {
         PdfGenerator pg = new PdfGenerator();
         //pg.genBildataAndPDF();
         //pg.genHusdataAndPDF();
-        pg.genReisedataAndPDF();
+        //pg.genReisedataAndPDF();
+        pg.genInnbodataAndPDF();
+    }
+
+    public void genInnbodataAndPDF() {
+        InnboInput ii = new InnboInput();
+
+        // Om innbo
+        ii.setUtleieandel("ikke_utleid");
+        ii.setBorSelv("true");
+        ii.setByggemaate("mur");
+        ii.setBoligtype("enebolig");
+        ii.setByggeaar("1955");
+        ii.setInnbruddsalarm("true");
+        List<String> innbruddsAlarmEgenskaper = new ArrayList<String>();
+        innbruddsAlarmEgenskaper.add("fg_godkjent");
+        innbruddsAlarmEgenskaper.add("varsler_vaktselskap");
+        ii.setInnbruddsalarmEgenskap(innbruddsAlarmEgenskaper);
+        ii.setBrannalarm("true");
+        List<String> brannAlarmEgenskaper = new ArrayList<String>();
+        brannAlarmEgenskaper.add("fg_godkjent");
+        brannAlarmEgenskaper.add("varsler_vaktselskap");
+        ii.setBrannalarmEgenskap(brannAlarmEgenskaper);
+        ii.setVannalarm("true");
+        ii.setVannstoppventil("true");
+        ii.setInnbosum("500000");
+        ii.setEgenandel("10000");
+        ii.setRomUnderBakken("true");
+        ii.setKomfyrvaktKomfyralarm("komfyralarm");
+        ii.setElKontroll("ja_siste_fem");
+        ii.setAntallHusstandmedlemmer("3");
+        ii.setRoeykere("true");
+        ii.setAntallRom("5");
+        ii.setBruttoareal("100");
+        ii.setBadWc("3");
+        ii.setAutomatsikringer("true");
+        ii.setAutomatsikringerAar("1999");
+        ii.setRorIRor("true");
+
+        // Om deg
+        ii.setMellomnavn("Wim");
+        ii.setEtternavn("Sjøholm");
+        ii.setFoedselsnr("27058038356");
+        ii.setPostnr("0482");
+        ii.setGate("Grefsenveien");
+        ii.setGatenr("8");
+
+        List<String> foreninger = new ArrayList<String>();
+        foreninger.add("KOL");
+        foreninger.add("Norsk Journalistlag");
+        foreninger.add("Ansatt kommune");
+        ii.setForeningsMedlemsskap(foreninger);
+
+
+        List<Tilbud> tilbud = new ArrayList<Tilbud>();
+        tilbud.add(new InnboTilbud("Utrygg", "Hus", "Info 1",  "12000", "1337"));
+        tilbud.add(new InnboTilbud("Else", "Hus", "Info 2", "12000", "420"));
+        tilbud.add(new InnboTilbud("SlukketBrann", "Husforsikring", "Info 3", "12000", "6969"));
+
+        generatePDF(ii, tilbud, "innbo");
+
     }
 
     public void genReisedataAndPDF() {
