@@ -107,9 +107,9 @@ public class PdfGenerator {
 
 
         List<Tilbud> tilbud = new ArrayList<Tilbud>();
-        tilbud.add(new HusTilbud("Utrygg", "Bilforsikring", "Info 1",  "12000", "1337"));
-        tilbud.add(new HusTilbud("Else", "Bil", "Info 2", "12000", "420"));
-        tilbud.add(new HusTilbud("SlukketBrann", "Bil", "Info 3", "12000", "6969"));
+        tilbud.add(new HusTilbud("Utrygg", "Hus", "Info 1",  "12000", "1337"));
+        tilbud.add(new HusTilbud("Else", "Hus", "Info 2", "12000", "420"));
+        tilbud.add(new HusTilbud("SlukketBrann", "Husforsikring", "Info 3", "12000", "6969"));
 
         generatePDF(hi, tilbud, "hus");
     }
