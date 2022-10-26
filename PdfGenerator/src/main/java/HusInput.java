@@ -37,7 +37,7 @@ public class HusInput extends CalculatorInput {
     public String egenandel;
     public String antallForsikringsskader;
     public String vannskadeAar;
-    public String mustograateskader;
+    public String musograateskader;
     public String andreskader;
     public String antallHusstandmedlemmer;
     public String krypkjeller;
@@ -307,12 +307,12 @@ public class HusInput extends CalculatorInput {
         this.vannskadeAar = vannskadeAar;
     }
 
-    public String getMustograateskader() {
-        return mustograateskader;
+    public String getMusograateskader() {
+        return musograateskader;
     }
 
-    public void setMustograateskader(String mustograateskader) {
-        this.mustograateskader = mustograateskader;
+    public void setMusograateskader(String musograateskader) {
+        this.musograateskader = musograateskader;
     }
 
     public String getAndreskader() {

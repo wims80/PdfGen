@@ -32,8 +32,86 @@ public class PdfGenerator {
         PdfGenerator pg = new PdfGenerator();
         //pg.generatePdf(args[0]);
         //pg.convertBil();
-        pg.genBildataAndPDF();
+        //pg.genBildataAndPDF();
+        pg.genHusdataAndPDF();
         //pg.generatePDF("hus");
+    }
+
+    public void genHusdataAndPDF() {
+        HusInput hi = new HusInput();
+
+        // Om deg selv
+        hi.setMellomnavn("Wim");
+        hi.setEtternavn("Sjøholm");
+        hi.setFoedselsnr("27058038356");
+        hi.setPostnr("0482");
+        List<String> foreninger = new ArrayList<String>();
+        foreninger.add("KOL");
+        foreninger.add("Norsk Journalistlag");
+        foreninger.add("Ansatt kommune");
+        hi.setForeningsMedlemsskap(foreninger);
+
+        // Om boligen
+        hi.setGate("Grefsenveien");
+        hi.setGatenr("8");
+        hi.setBoligtype("enebolig");
+        hi.setBruttoareal("100");
+        hi.setStandard("normal");
+        hi.setByggeaar("1955");
+        hi.setByggemaate("mur");
+        hi.setBebodd("true");
+        hi.setAntallBoenheter("1");
+        hi.setUtleiestatus1("utleid");
+        hi.setRoerIRoer("false");
+        hi.setLeieNaering("false");
+        hi.setInnbruddsalarm("true");
+        List<String> innbruddsAlarmEgenskaper = new ArrayList<String>();
+        innbruddsAlarmEgenskaper.add("fg_godkjent");
+        innbruddsAlarmEgenskaper.add("varsler_vaktselskap");
+        hi.setInnbruddsalarmEgenskap(innbruddsAlarmEgenskaper);
+        hi.setBrannalarm("true");
+        List<String> brannAlarmEgenskaper = new ArrayList<String>();
+        brannAlarmEgenskaper.add("fg_godkjent");
+        brannAlarmEgenskaper.add("varsler_vaktselskap");
+        hi.setBrannalarmEgenskap(brannAlarmEgenskaper);
+        hi.setVannalarm("false");
+        hi.setVannstoppventil("false");
+        hi.setKomfyrvaktKomfyralarm("komfyrvakt");
+        hi.setAutomatsikringer("true");
+        hi.setAutomatsikringerAar("1995");
+        hi.setTakvinkel("flatt_tak");
+        hi.setVerneverdig("true");
+        hi.setEtasjer("2");
+        hi.setTilbakeslagsventil("false");
+        hi.setPantIHus("false");
+        hi.setRomUbakkeplan("false");
+        hi.setTakIGodStand("true");
+
+        // Om forsikringen
+        hi.setEgenandel("5000");
+        hi.setAntallForsikringsskader("0");
+        hi.setVannskadeAar("2020");
+        hi.setMusograateskader("true");
+        hi.setAndreskader("true");
+        hi.setAntallHusstandmedlemmer("2");
+        hi.setKrypkjeller("false");
+        hi.setNyttElAnleggAar("1995");
+        hi.setRoerrenovertAar("null");
+        hi.setAntallVaatrom("1");
+        hi.setpRomSum("25");
+        hi.setpRomKjeller("0");
+        hi.setsRomSum("30");
+        hi.setsRomKjeller("0");
+        hi.setElKontroll("ja_siste_ti");
+        hi.setRehabilitering("false");
+
+
+        List<Tilbud> tilbud = new ArrayList<Tilbud>();
+        tilbud.add(new HusTilbud("Utrygg", "Bilforsikring", "Info 1",  "12000", "1337"));
+        tilbud.add(new HusTilbud("Else", "Bil", "Info 2", "12000", "420"));
+        tilbud.add(new HusTilbud("SlukketBrann", "Bil", "Info 3", "12000", "6969"));
+
+        generatePDF(hi, tilbud, "hus");
     }
 
     public void genBildataAndPDF() {
