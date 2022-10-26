@@ -31,9 +31,9 @@ public class PdfGenerator {
     public static void main(String[] args) {
         PdfGenerator pg = new PdfGenerator();
         //pg.genHusdataAndPDF();
-        pg.genBildataAndPDF();
+        //pg.genBildataAndPDF();
         //pg.genReisedataAndPDF();
-        //pg.genInnbodataAndPDF();
+        pg.genInnbodataAndPDF();
     }
 
     public void genInnbodataAndPDF() {
