@@ -252,7 +252,9 @@ public class PdfGenerator {
     public void generatePDF(CalculatorInput calcInput, List<Tilbud> tilbud, String lob) {
         String filnavn = lob + "forsikring";
         try {
-            InputStream in = new FileInputStream(new File(filnavn + ".odt"));
+            //File templateFile = new File(getClass().getResource(filnavn + ".odt").getFile());
+            ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+            InputStream in = classloader.getResourceAsStream(filnavn + ".odt");
             IXDocReport report = XDocReportRegistry.getRegistry().loadReport(in, TemplateEngineKind.Velocity);
 
             FieldsMetadata metadata = report.createFieldsMetadata();
