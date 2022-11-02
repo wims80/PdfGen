@@ -254,7 +254,7 @@ public class PdfGenerator {
         try {
             //File templateFile = new File(getClass().getResource(filnavn + ".odt").getFile());
             ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-            InputStream in = classloader.getResourceAsStream(filnavn + ".odt");
+            InputStream in = classloader.getResourceAsStream("document/" + filnavn + ".odt");
             IXDocReport report = XDocReportRegistry.getRegistry().loadReport(in, TemplateEngineKind.Velocity);
 
             FieldsMetadata metadata = report.createFieldsMetadata();
